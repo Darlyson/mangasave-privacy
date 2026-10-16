@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade — MangaSave</title>
+  <style>
+    :root {
+      --bg: #1e1e2e;
+      --surface: #181825;
+      --card: #313244;
+      --text: #cdd6f4;
+      --subtext: #a6adc8;
+      --accent: #cba6f7;
+      --green: #a6e3a1;
+      --border: #45475a;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+    h1 {
+      color: var(--accent);
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+    .updated {
+      color: var(--subtext);
+      font-size: 0.9rem;
+    }
+    .lang-switch {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 0.9rem;
+      color: var(--green);
+      text-decoration: none;
+    }
+    h2 {
+      color: var(--accent);
+      font-size: 1.3rem;
+      margin-top: 28px;
+      margin-bottom: 12px;
+    }
+    p, li {
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    ul {
+      padding-left: 24px;
+      margin-bottom: 16px;
+    }
+    .highlight-box {
+      background-color: var(--card);
+      border-left: 4px solid var(--green);
+      padding: 16px 20px;
+      border-radius: 6px;
+      margin: 20px 0;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 48px 0;
+    }
+    code {
+      background-color: var(--card);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+      color: var(--green);
+    }
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--subtext);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Política de Privacidade — MangaSave</h1>
+      <p class="updated">Última atualização: Outubro de 2026</p>
+      <a class="lang-switch" href="#english">🇺🇸 Read in English below</a>
+    </header>
+
+    <div class="highlight-box">
+      <strong>Resumo Transparente:</strong> O <strong>MangaSave</strong> funciona de forma 100% local no seu navegador. Nós <strong>não</strong> coletamos, não armazenamos em servidores próprios, não rastreamos e não vendemos nenhum dado pessoal, histórico de navegação ou lista de favoritos.
+    </div>
+
+    <h2>1. Armazenamento de Dados</h2>
+    <p>
+      Toda a sua biblioteca de mangás, capítulos salvos, preferências visuais e configurações ficam armazenados exclusivamente no seu próprio dispositivo por meio da API oficial do navegador (<code>chrome.storage.local</code>). Nenhum dado da sua biblioteca é transmitido para servidores do desenvolvedor.
+    </p>
+
+    <h2>2. Uso das Permissões da Extensão</h2>
+    <p>O MangaSave solicita apenas as permissões estritamente necessárias para o seu funcionamento:</p>
+    <ul>
+      <li><strong><code>storage</code> e <code>unlimitedStorage</code>:</strong> Usadas para salvar localmente a sua biblioteca de obras, capas, capítulos e configurações sem risco de perda por limite de espaço.</li>
+      <li><strong><code>activeTab</code>, <code>tabs</code>, <code>scripting</code> e <code>offscreen</code>:</strong> Usadas apenas quando você aciona o botão de salvar o capítulo da página atual, pesquisar obras ou verificar se os links salvos na sua biblioteca continuam ativos (Verificador de Saúde e Centro de Resgate).</li>
+      <li><strong><code>bookmarks</code>:</strong> Usada exclusivamente quando você escolhe importar pastas de favoritos já existentes no seu navegador para dentro da biblioteca do MangaSave. Seus favoritos originais nunca são alterados ou apagados.</li>
+      <li><strong><code>downloads</code>:</strong> Usada para permitir que você exporte um arquivo de backup (<code>.json</code>) da sua biblioteca para o seu computador.</li>
+      <li><strong><code>alarms</code> e <code>notifications</code>:</strong> Usadas para checar periodicamente atualizações de status/capas de obras em lançamento (quando ativado por você nos Ajustes) e avisar quando uma importação ou verificação termina.</li>
+    </ul>
+
+    <h2>3. Serviços de Terceiros e APIs Públicas</h2>
+    <p>
+      Para enriquecer sua biblioteca com capas oficiais, sinopses, tags e autores, a extensão faz consultas diretas do seu navegador para APIs públicas de catalogação:
+    </p>
+    <ul>
+      <li><strong>MangaDex API</strong> (<code>api.mangadex.org</code> / <code>uploads.mangadex.org</code>)</li>
+      <li><strong>AniList GraphQL API</strong> (<code>graphql.anilist.co</code>)</li>
+      <li><strong>Google Translate API</strong> (<code>translate.googleapis.com</code>) — usada apenas como fallback para traduzir termos de busca quando necessário.</li>
+    </ul>
+
+    <h2>4. Compartilhamento e Venda de Dados</h2>
+    <p>
+      O MangaSave <strong>não coleta, não compartilha, não transfere e não vende</strong> dados de usuários a terceiros, anunciantes ou corretores de dados. O uso de informações recebidas das APIs do Google Chrome respeita integralmente a <em>Chrome Web Store User Data Policy</em>, incluindo os requisitos de Uso Limitado (<em>Limited Use</em>).
+    </p>
+
+    <hr id="english">
+
+    <header>
+      <h1>Privacy Policy — MangaSave</h1>
+      <p class="updated">Last updated: October 2026</p>
+    </header>
+
+    <div class="highlight-box">
+      <strong>Summary:</strong> <strong>MangaSave</strong> operates 100% locally in your browser. We do <strong>not</strong> collect, store on external servers, track, or sell any personal data, browsing history, or bookmarks.
+    </div>
+
+    <h2>1. Data Storage</h2>
+    <p>
+      Your entire manga library, saved chapters, visual preferences, and settings are stored exclusively on your own device using the browser's native storage API (<code>chrome.storage.local</code>). No library data is ever sent to developer-owned servers.
+    </p>
+
+    <h2>2. Extension Permissions Justification</h2>
+    <ul>
+      <li><strong><code>storage</code> &amp; <code>unlimitedStorage</code>:</strong> Required to store the user's manga library, metadata, and preferences locally on the device.</li>
+      <li><strong><code>activeTab</code>, <code>tabs</code>, <code>scripting</code> &amp; <code>offscreen</code>:</strong> Used only upon user request to capture the current chapter from the active tab, search for titles, or check the health status of saved chapter links.</li>
+      <li><strong><code>bookmarks</code>:</strong> Used solely when the user explicitly imports a browser bookmark folder into their MangaSave library (read-only).</li>
+      <li><strong><code>downloads</code>:</strong> Used to export a local JSON backup file of the user's library when requested.</li>
+      <li><strong><code>alarms</code> &amp; <code>notifications</code>:</strong> Used for optional periodic metadata refresh of ongoing series and to notify the user when batch imports or link health checks complete.</li>
+    </ul>
+
+    <h2>3. Third-Party Public APIs</h2>
+    <p>
+      To fetch official cover art, synopses, genres, and author metadata, the extension queries public catalog APIs directly from the user's browser: MangaDex API (<code>api.mangadex.org</code>), AniList API (<code>graphql.anilist.co</code>), and Google Translate endpoint for title fallback queries.
+    </p>
+
+    <h2>4. Limited Use Disclosure</h2>
+    <p>
+      MangaSave does not collect, sell, or transfer user data to third parties. The use of information received from Google APIs adheres to the Chrome Web Store User Data Policy, including the Limited Use requirements.
+    </p>
+
+    <footer>
+      MangaSave &copy; 2026 — Todos os direitos reservados.
+    </footer>
+  </div>
+</body>
+</html>
+
